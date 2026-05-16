@@ -77,9 +77,9 @@ plugins:
       clientId: "${YOUTUBE_CLIENT_ID}"
       clientSecret: "${YOUTUBE_CLIENT_SECRET}"
     clients:
-      - WEB
-      - ANDROID_VR
       - TVHTML5EMBEDDED
+      - ANDROID_VR
+      - TV
 
 metrics:
   prometheus:
