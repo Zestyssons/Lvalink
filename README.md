@@ -1,6 +1,4 @@
-# Lavalink Server for Glizh Music (Render Ready)
-
-Servidor Lavalink optimizado para ser desplegado en Render.com usando Docker. Incluye soporte para Spotify, YouTube (OAuth) y SoundCloud mediante plugins.
+# Lavalink Server
 
 ## 🚀 Despliegue en Render.com
 
@@ -14,16 +12,14 @@ Servidor Lavalink optimizado para ser desplegado en Render.com usando Docker. In
 
 | Variable | Descripción |
 |----------|-------------|
-| `SPOTIFY_CLIENT_ID` | Client ID de Spotify Developer Dashboard |
+| `SPOTIFY_CLIENT_ID` | Client ID de Spotify |
 | `SPOTIFY_CLIENT_SECRET` | Client Secret de Spotify |
-| `YOUTUBE_CLIENT_ID` | Client ID de Google Cloud Console (OAuth) |
-| `YOUTUBE_CLIENT_SECRET` | Client Secret de Google Cloud Console |
-| `GENIUS_TOKEN` | Access Token de Genius API |
-| `PORT` | 2333 (Opcional, Render lo asigna) |
+| `YOUTUBE_CLIENT_ID` | Client ID de Google OAuth |
+| `YOUTUBE_CLIENT_SECRET` | Client Secret de Google OAuth |
+| `GENIUS_TOKEN` | Token de Genius API |
+| `PORT` | 2333 |
 
-## 🔗 Configuración en el Bot (Vocard)
-
-Para conectar tu bot a este servidor, edita el archivo `settings.json` de tu bot y añade este nodo:
+## 🔗 Configuración en el Bot
 
 ```json
 "Lavalink_Render": {
@@ -35,7 +31,3 @@ Para conectar tu bot a este servidor, edita el archivo `settings.json` de tu bot
     "heartbeat": 30
 }
 ```
-
-## 🛡️ Mantener 24/7
-
-Usa **UptimeRobot** para hacer un ping cada 5 minutos a la URL de tu servidor para evitar que el plan gratuito de Render entre en modo reposo.
