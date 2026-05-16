@@ -1,0 +1,8 @@
+Lavalink.jar
+logs/
+*.log
+.DS_Store
+*.tmp
+.idea/
+.vscode/
+build/

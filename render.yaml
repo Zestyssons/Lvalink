@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: lavalink-server
+    env: docker
+    plan: free # Puedes cambiar a 'starter' si necesitas más potencia
+    region: ohio
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true
