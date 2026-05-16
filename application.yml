@@ -77,7 +77,7 @@ plugins:
       clientId: "${YOUTUBE_CLIENT_ID}"
       clientSecret: "${YOUTUBE_CLIENT_SECRET}"
     clients:
-      - TVHTML5EMBEDDED
+      - TVHTML5
       - ANDROID_VR
       - TV
 
