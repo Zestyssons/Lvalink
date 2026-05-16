@@ -12,6 +12,7 @@ RUN wget https://github.com/lavalink-devs/Lavalink/releases/latest/download/Lava
 COPY application.yml application.yml
 COPY nginx.conf.template nginx.conf.template
 COPY index.html index.html
+COPY background.jpg background.jpg
 COPY entrypoint.sh entrypoint.sh
 
 # Give entrypoint execute permissions

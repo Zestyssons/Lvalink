@@ -17,6 +17,12 @@ http {
             try_files /index.html =404;
         }
 
+        # Serve static background image
+        location = /background.jpg {
+            root /opt/Lavalink;
+            try_files /background.jpg =404;
+        }
+
         # Serve custom unauthenticated /version for UptimeRobot
         location = /version {
             default_type text/plain;
