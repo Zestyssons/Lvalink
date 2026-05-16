@@ -67,15 +67,17 @@ plugins:
       mediaUserToken: "${APPLE_MUSIC_MEDIA_USER_TOKEN}"
     deezer:
       masterDecryptionKey: "${DEEZER_MASTER_KEY}"
+    genius:
+      accessToken: "${GENIUS_TOKEN}"
   youtube:
     enabled: true
     allowSearch: true
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
-    # Configuración de OAuth opcional para evitar baneos de IP
-    # oauth:
-    #   enabled: true
-    #   refreshToken: "${YOUTUBE_REFRESH_TOKEN}"
+    oauth:
+      enabled: true
+      clientId: "${YOUTUBE_CLIENT_ID}"
+      clientSecret: "${YOUTUBE_CLIENT_SECRET}"
 
 metrics:
   prometheus:
