@@ -52,7 +52,7 @@ plugins:
     sources:
       spotify: true
       applemusic: true
-      deezer: true
+      deezer: false
       yandexmusic: false
       floweryts: false
       youtube: true
@@ -65,8 +65,6 @@ plugins:
     applemusic:
       countryCode: "US"
       mediaUserToken: "${APPLE_MUSIC_MEDIA_USER_TOKEN}"
-    deezer:
-      masterDecryptionKey: "${DEEZER_MASTER_KEY}"
     genius:
       accessToken: "${GENIUS_TOKEN}"
   youtube:
