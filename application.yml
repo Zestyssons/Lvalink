@@ -78,9 +78,11 @@ plugins:
       clientSecret: "${YOUTUBE_CLIENT_SECRET}"
       refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
     clients:
+      - MUSIC
       - ANDROID_VR
       - WEB
-      - WEB_EMBEDDED_PLAYER
+      - WEBEMBEDDED
+      - TV
 
 metrics:
   prometheus:
