@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-gradient: linear-gradient(135deg, #0f0c1b 0%, #1a103c 100%);
-            --primary: #9d4edd;
-            --accent: #ffb703;
-            --success: #00f5d4;
+            --bg-dark: #0f0b05;
+            --primary: #ffd166; /* Warm yellow/gold */
+            --accent: #ff9f1c; /* Amber/orange */
+            --success: #00f5d4; /* Operational status cyan/green */
             --text: #f8f9fa;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --card-border: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(18, 13, 7, 0.55); /* Warm chocolate glassmorphism */
+            --card-border: rgba(255, 209, 102, 0.15); /* Soft gold border */
         }
 
         * {
@@ -24,8 +24,7 @@
         }
 
         body {
-            background: linear-gradient(rgba(15, 12, 27, 0.8), rgba(26, 16, 60, 0.8)), url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: var(--bg-dark);
             color: var(--text);
             min-height: 100vh;
             display: flex;
@@ -35,18 +34,32 @@
             position: relative;
         }
 
+        /* Ambient blurred background image */
+        .bg-ambient {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(rgba(15, 11, 5, 0.78), rgba(26, 18, 8, 0.78)), url('background.jpg') no-repeat center center;
+            background-size: cover;
+            filter: blur(15px); /* Soft premium blur */
+            transform: scale(1.05); /* Avoid white edges */
+            z-index: 1;
+        }
+
         /* Abstract glowing backgrounds */
         body::before, body::after {
             content: '';
             position: absolute;
-            width: 400px;
-            height: 400px;
+            width: 450px;
+            height: 450px;
             border-radius: 50%;
-            background: var(--primary);
-            filter: blur(150px);
+            background: var(--accent);
+            filter: blur(180px);
             opacity: 0.15;
-            z-index: 1;
-            animation: pulse 10s infinite alternate;
+            z-index: 2;
+            animation: pulse 12s infinite alternate;
         }
 
         body::before {
@@ -57,13 +70,13 @@
         body::after {
             bottom: -10%;
             right: -10%;
-            background: var(--success);
-            animation-delay: 5s;
+            background: var(--primary);
+            animation-delay: 6s;
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.2); }
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.15) translate(20px, 20px); }
         }
 
         .container {
@@ -74,7 +87,7 @@
         }
 
         .card {
-            background: rgba(15, 12, 27, 0.45);
+            background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 24px;
             padding: 40px 30px;
@@ -86,7 +99,7 @@
 
         .card:hover {
             transform: translateY(-5px);
-            border-color: rgba(157, 78, 221, 0.3);
+            border-color: rgba(255, 209, 102, 0.35);
         }
 
         .logo-container {
@@ -98,15 +111,15 @@
         .logo {
             width: 75px;
             height: 75px;
-            background: linear-gradient(135deg, var(--primary) 0%, #7b2cbf 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 10px 25px rgba(157, 78, 221, 0.5);
+            box-shadow: 0 10px 25px rgba(255, 159, 28, 0.4);
             animation: float 4s ease-in-out infinite;
             padding: 2px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.15);
             overflow: hidden;
         }
 
@@ -126,7 +139,7 @@
             font-size: 28px;
             font-weight: 800;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #fff 0%, #ccc 100%);
+            background: linear-gradient(90deg, #ffd166 0%, #fff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -205,6 +218,7 @@
     </style>
 </head>
 <body>
+    <div class="bg-ambient"></div>
     <div class="container">
         <div class="card">
             <div class="logo-container">
