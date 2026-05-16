@@ -76,7 +76,7 @@ plugins:
       enabled: true
       clientId: "${YOUTUBE_CLIENT_ID}"
       clientSecret: "${YOUTUBE_CLIENT_SECRET}"
-      refreshToken: "${YOUTUBE_REFRESH_TOKEN}"
+      refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
     clients:
       - TVHTML5
       - ANDROID_VR
