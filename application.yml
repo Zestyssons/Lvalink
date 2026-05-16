@@ -15,7 +15,7 @@ lavalink:
     sources:
       youtube: false # Deshabilitado para usar el plugin
       bandcamp: true
-      soundcloud: true
+      soundcloud: false
       twitch: true
       vimeo: true
       http: true
