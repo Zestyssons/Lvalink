@@ -56,6 +56,11 @@ plugins:
       yandexmusic: false
       floweryts: false
       youtube: true
+      tidal: true
+    tidal:
+      clientId: "BroRqdflrOW1fvDW"
+      clientSecret: "ZculDW2kdPFVC7o8ilfrdTN1T4JbMC3GC90iJ1Iw0d8="
+      countryCode: "US"
     spotify:
       clientId: "${SPOTIFY_CLIENT_ID}"
       clientSecret: "${SPOTIFY_CLIENT_SECRET}"
