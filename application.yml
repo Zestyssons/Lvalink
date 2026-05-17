@@ -73,13 +73,17 @@ plugins:
     allowSearch: true
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
+    remoteCipher:
+      url: "https://cipher.kikkia.dev/"
     oauth:
       enabled: true
       refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
     clients:
       - MUSIC
-      - ANDROID
-      - IOS
+      - TV
+      - WEB
+      - WEBEMBEDDED
+      - ANDROID_VR
 
 metrics:
   prometheus:
