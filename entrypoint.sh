@@ -5,6 +5,17 @@ if [ -z "$PORT" ]; then
   export PORT=2333
 fi
 
+# Load environment variables from Render Secret File if exists
+if [ -f "/etc/secrets/.env" ]; then
+  echo "Loading environment variables from /etc/secrets/.env"
+  export $(grep -v '^#' /etc/secrets/.env | xargs)
+fi
+# Load from local .env if exists (fallback)
+if [ -f "/opt/Lavalink/.env" ]; then
+  echo "Loading environment variables from local .env"
+  export $(grep -v '^#' /opt/Lavalink/.env | xargs)
+fi
+
 echo "Configuring Nginx with PORT=${PORT}..."
 
 # Replace ${PORT} placeholder in Nginx config with the actual $PORT env var
