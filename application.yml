@@ -73,7 +73,8 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     oauth:
-      enabled: false
+      enabled: true
+      refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
     clients:
       - MUSIC
       - WEB
