@@ -73,16 +73,13 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     oauth:
-      enabled: true
-      clientId: "${YOUTUBE_CLIENT_ID}"
-      clientSecret: "${YOUTUBE_CLIENT_SECRET}"
-      refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
+      enabled: false
     clients:
       - MUSIC
-      - ANDROID_VR
       - WEB
       - WEBEMBEDDED
-      - TV
+      - ANDROID_MUSIC
+      - ANDROID_VR
 
 metrics:
   prometheus:
