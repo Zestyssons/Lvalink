@@ -10,6 +10,22 @@ if [ -f "/etc/secrets/.env" ]; then
   echo "Loading environment variables from /etc/secrets/.env"
   export $(grep -v '^#' /etc/secrets/.env | xargs)
 fi
+
+# Load individual secret files from /etc/secrets/ as environment variables
+if [ -d "/etc/secrets" ]; then
+  echo "Loading individual secrets from /etc/secrets/..."
+  for file in /etc/secrets/*; do
+    if [ -f "$file" ]; then
+      filename=$(basename "$file")
+      if [ "$filename" != ".env" ]; then
+        # Read content, strip newlines/carriage returns, and export
+        val=$(cat "$file" | tr -d '\r\n')
+        export "$filename"="$val"
+        echo "Exported environment variable from secret file: $filename"
+      fi
+    fi
+  done
+fi
 # Load from local .env if exists (fallback)
 if [ -f "/opt/Lavalink/.env" ]; then
   echo "Loading environment variables from local .env"
