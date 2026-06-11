@@ -89,8 +89,8 @@ plugins:
       refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
     clients:
       - MUSIC
-      - TV
       - ANDROID_VR
+      - MWEB
       - WEB
       - WEBEMBEDDED
 
