@@ -48,19 +48,17 @@ lavalink:
 plugins:
   lavasrc:
     providers:
-      - "dzisrc:%ISRC%"           # Deezer por ISRC (mejor calidad, no bloqueado)
-      - "dzsearch:%QUERY%"         # Deezer búsqueda directa
+      - "ytsearch:\"%ISRC%\""      # YouTube ISRC (Prioritario y estable por OAuth)
+      - "ytsearch:%QUERY%"         # YouTube búsqueda (Prioritario y estable por OAuth)
       - "scsearch:%QUERY%"         # SoundCloud fallback
-      - "ytsearch:\"%ISRC%\""      # YouTube ISRC (último recurso)
-      - "ytsearch:%QUERY%"         # YouTube búsqueda (último recurso)
     sources:
       spotify: true
       applemusic: true
-      deezer: true
+      deezer: false
       yandexmusic: false
       floweryts: false
       youtube: true
-      tidal: true
+      tidal: false
     spotify:
       clientId: "${SPOTIFY_CLIENT_ID}"
       clientSecret: "${SPOTIFY_CLIENT_SECRET}"
