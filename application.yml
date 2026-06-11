@@ -48,10 +48,11 @@ lavalink:
 plugins:
   lavasrc:
     providers:
-      - "dzisrc:%ISRC%"           # Deezer ISRC (mejor match de calidad)
-      - "ytsearch:\"%ISRC%\""     # YouTube por ISRC
-      - "ytsearch:%QUERY%"        # YouTube por nombre
-      - "scsearch:%QUERY%"        # SoundCloud como fallback
+      - "dzisrc:%ISRC%"           # Deezer por ISRC (mejor calidad, no bloqueado)
+      - "dzsearch:%QUERY%"         # Deezer búsqueda directa
+      - "scsearch:%QUERY%"         # SoundCloud fallback
+      - "ytsearch:\"%ISRC%\""      # YouTube ISRC (último recurso)
+      - "ytsearch:%QUERY%"         # YouTube búsqueda (último recurso)
     sources:
       spotify: true
       applemusic: true
@@ -90,7 +91,7 @@ plugins:
     clients:
       - MUSIC
       - ANDROID_VR
-      - MWEB
+      - TVHTML5_SIMPLY
       - WEB
       - WEBEMBEDDED
 
