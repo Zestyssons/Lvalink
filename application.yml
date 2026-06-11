@@ -88,11 +88,10 @@ plugins:
       skipInitialization: true
       refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
     clients:
-      - MUSIC
-      - ANDROID_VR
-      - TVHTML5_SIMPLY
-      - WEB
-      - WEBEMBEDDED
+      - MUSIC           # OAuth-compatible, YouTube Music client
+      - WEB             # OAuth-compatible, main web client
+      - ANDROID_TESTSUITE  # OAuth-compatible, stable Android testing client
+      - TVHTML5EMBEDDED    # OAuth-compatible, embedded TV client
 
 metrics:
   prometheus:
