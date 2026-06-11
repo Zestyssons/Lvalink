@@ -48,13 +48,14 @@ lavalink:
 plugins:
   lavasrc:
     providers:
+      - "dzisrc:%ISRC%"           # Deezer ISRC (mejor match de calidad)
       - "ytsearch:\"%ISRC%\""     # YouTube por ISRC
       - "ytsearch:%QUERY%"        # YouTube por nombre
       - "scsearch:%QUERY%"        # SoundCloud como fallback
     sources:
       spotify: true
       applemusic: true
-      deezer: false
+      deezer: true
       yandexmusic: false
       floweryts: false
       youtube: true
@@ -68,6 +69,9 @@ plugins:
     applemusic:
       countryCode: "US"
       mediaUserToken: "${APPLE_MUSIC_MEDIA_USER_TOKEN}"
+    deezer:
+      masterDecryptionKey: "g4el58wc"
+      arl: "${DEEZER_ARL}"
     tidal:
       countryCode: "US"
       token: "${TIDAL_CLIENT_ID:${TIDAL_TOKEN:}}"
