@@ -68,7 +68,7 @@ plugins:
       mediaUserToken: "${APPLE_MUSIC_MEDIA_USER_TOKEN}"
     tidal:
       countryCode: "US"
-      token: "${TIDAL_TOKEN:}"
+      token: "${TIDAL_CLIENT_ID:${TIDAL_TOKEN:}}"
     genius:
       accessToken: "${GENIUS_TOKEN}"
   youtube:
