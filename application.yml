@@ -85,6 +85,7 @@ plugins:
       url: "https://cipher.kikkia.dev/"
     oauth:
       enabled: true
+      skipInitialization: true
       refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
     clients:
       - MUSIC
