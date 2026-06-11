@@ -83,10 +83,10 @@ plugins:
       refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
     clients:
       - MUSIC
-      - TV
+      - IOS
+      - ANDROID_LITE
       - WEB
       - WEBEMBEDDED
-      - ANDROID_VR
 
 metrics:
   prometheus:
