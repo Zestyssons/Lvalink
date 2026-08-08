@@ -13,8 +13,6 @@ lavalink:
       repository: "https://maven.lavalink.dev/releases"
     - dependency: "com.github.topi314.lavalyrics:lavalyrics-plugin:1.1.0"
       repository: "https://maven.lavalink.dev/releases"
-    - dependency: "com.github.DuncteBot:skybot-lavalink-plugin:1.7.1"
-      repository: "https://jitpack.io"
     - dependency: "com.github.devoxin:LavaDSPX-Plugin:0.0.5"
       repository: "https://jitpack.io"
 
