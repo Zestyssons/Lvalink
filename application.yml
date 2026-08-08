@@ -6,11 +6,15 @@ lavalink:
   plugins:
     - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.3"
       repository: "https://maven.lavalink.dev/releases"
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.2"
     - dependency: "com.github.topi314.sponsorblock:sponsorblock-plugin:3.0.1"
       repository: "https://maven.lavalink.dev/releases"
     - dependency: "com.github.topi314.lavasearch:lavasearch-plugin:1.0.0"
       repository: "https://maven.lavalink.dev/releases"
+    - dependency: "com.github.topi314.lavalyrics:lavalyrics-plugin:1.1.0"
+      repository: "https://maven.lavalink.dev/releases"
+    - dependency: "com.github.DuncteBot:skybot-lavalink-plugin:1.7.1"
+      repository: "https://jitpack.io"
 
   server:
     password: "glizhmusicpassword123"
@@ -86,7 +90,7 @@ plugins:
     oauth:
       enabled: true
       skipInitialization: true
-      refreshToken: "${YOUTUBE_REFRESH_TOKEN:}"
+      refreshToken: ${YOUTUBE_REFRESH_TOKEN:null}
     clients:
       - MUSIC
       - WEB
@@ -106,3 +110,16 @@ logging:
   level:
     root: INFO
     lavalink: INFO
+
+plugins:
+  lavalyrics:
+    sources:
+      - genius    # Usa tu Genius API existente
+      - lrclib    # Gratis, sin API key necesaria
+    countryCode: US
+  
+  skybot:
+    sources:
+      deezer: true        # Alternativa gratis a Spotify
+      applemusic: true    # Apple Music gratis
+      getyarn: false      # Memes de audio (opcional)
