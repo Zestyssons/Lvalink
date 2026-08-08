@@ -14,7 +14,7 @@ lavalink:
       repository: "https://maven.lavalink.dev/releases"
     - dependency: "com.github.topi314.lavalyrics:lavalyrics-plugin:1.1.0"
       repository: "https://maven.lavalink.dev/releases"
-    - dependency: "com.dunctebot:skybot-lavalink-plugin:1.7.1"
+    - dependency: "com.dunctebot:skybot-lavalink-plugin:1.6.2"
       repository: "https://maven.lavalink.dev/releases"
 
   server:
