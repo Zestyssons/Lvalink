@@ -87,9 +87,9 @@ plugins:
     remoteCipher:
       url: "https://cipher.kikkia.dev/"
     oauth:
-          enabled: true
-          skipInitialization: true
-          refreshToken: ${YOUTUBE_REFRESH_TOKEN:null}
+      enabled: true
+      skipInitialization: true
+      refreshToken: ${YOUTUBE_REFRESH_TOKEN:null}
     clients:
       - MUSIC
       - WEB
