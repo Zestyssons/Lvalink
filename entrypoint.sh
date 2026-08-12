@@ -41,5 +41,8 @@ echo "Starting Nginx in background..."
 service nginx start
 
 echo "Launching Lavalink Server..."
+echo "DIAG YOUTUBE_CLIENT_ID len=${#YOUTUBE_CLIENT_ID}"
+echo "DIAG YOUTUBE_CLIENT_SECRET len=${#YOUTUBE_CLIENT_SECRET}"
+echo "DIAG YOUTUBE_REFRESH_TOKEN len=${#YOUTUBE_REFRESH_TOKEN}"
 # Execute Lavalink jar in foreground to keep container running
 exec java -Dlavalink.resamplingQuality=low -Xmx512M -jar /opt/Lavalink/Lavalink.jar
