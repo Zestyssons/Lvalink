@@ -88,6 +88,7 @@ plugins:
       url: "https://cipher.kikkia.dev/"
     oauth:
       enabled: true
+      refreshToken: ${YOUTUBE_REFRESH_TOKEN:null}
       clientId: ${YOUTUBE_CLIENT_ID}
       clientSecret: ${YOUTUBE_CLIENT_SECRET}
     clients:
