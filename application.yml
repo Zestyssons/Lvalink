@@ -92,8 +92,7 @@ plugins:
     clients:
       - MUSIC
       - WEB
-      - ANDROID_TESTSUITE
-      - TVHTML5_SIMPLY
+      - ANDROID_MUSIC
   lavalyrics:
     sources:
       - genius    # Usa tu Genius API existente
