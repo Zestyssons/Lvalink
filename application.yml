@@ -92,9 +92,7 @@ plugins:
     clients:
       - MUSIC
       - WEB
-      - WEBEMBEDDED
-      - ANDROID_VR
-      - TV
+      - ANDROID_TESTSUITE
       - TVHTML5_SIMPLY
   lavalyrics:
     sources:
